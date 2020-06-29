@@ -1,2 +1,2 @@
-# Snathbot1
+# Snatchbot1
 Free chatbots offered by snatchbot
