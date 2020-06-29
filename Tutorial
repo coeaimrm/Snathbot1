@@ -1,0 +1,82 @@
+Building a Free Forever chat bot in Snatchbot
+If you want to save some money on server cost for deploying the chatbot unlike rasa/Watson.Snathcbot is there for you. Interface is almost same like dialogflow /rasa. We will be going in details about snatchbot chatbot creation today. I have also attached a video and github link for you at the end for better explanation.
+1.  Go to this site and log in with google or sign up with your email address.
+https://snatchbot.me/
+
+2.  Select “My Bot” from left menu. Then “Create Bot” from right side. You can edit the name later after entering into bot’s console from “Config” Men
+ 
+
+
+
+3.  Click on “Add new interaction/plugin” to add possible interactions between user and chat bot.
+You will see Bot message,Card,connections and Automation there.
+Botmessage- Stands for response of chatbot,You can add images here through embed link
+Cards- for adding images,buttons,links  as cards
+Connections- For connecting the interactions to other interactions.You can add your trained intent ,fallback interaction,NLP model here.
+
+
+
+4 .For Training the response of bot , You might need a NLP model ,which you can create from “NLP” menu from Left side then clicking on “Create new model”
+There You have to add “True match” and “False match “ in samples. You can do that selecting match  button  beside the statement .Once you have added sample for NLP Model through manual mode or Bulk mode , You have to train the model without delimiter
+ 
+
+5. Check the respone of Bot Periodically from right corner widget of your bot. If everything is working well go for deployment through “channels “ menu else you can add more training samples in NLP model and train. 
+ 
+
+ 
+
+6. For deployment part  ,you have to got “Channels menu” and customize the button from “Customize “ from right hand side for changing colors ,width,shape,pop up option etc.Then You can get the embed code from “ Get embed code” menu. For adjusting width and height of chatbot you have to add a CSS file .
+Here is an example of CSS (Casecade style sheet) I used for adjusting width and height of bot.
+#sntch_button
+{   
+    width: 90px !important;
+    height: 90px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/coe-ai-chatbot.appspot.com/o/logo.jpg?alt=media&token=2cc1435c-4370-4228-922b-0640237cadc8) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    border-radius: 50% !important;
+}
+#sntch_webchat iframe {
+    width: 400px !important;
+    height: 500px !important;
+}
+
+#sntch_webchat {
+    width: 400px !important;
+    height: 500px !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    border-radius: 20px 20px 0px 0px !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+}
+#sntch_close {
+    top: 12px !important;
+    right: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 26px !important;
+    line-height: 40px !important;
+    color: rgb(255, 255, 255) !important;
+    text-align: center !important;
+    cursor: pointer !important;
+}
+
+
+Note: Just Make width  and height of iframe and webchat frame same in my case 400px,500px for both case.
+
+Pro’s 
+Approximately Free for Deploying
+Con’s
+Need a lot of data in NLP models for recognizing the intents.
+
+Reference and Links
+1.Youtube links 
+https://www.youtube.com/channel/UC24rIhfmDz4rmHQcnAg53jg (snatchbot channel)
+https://www.youtube.com/channel/UC1r-eUmRv9U2geFQfrgx3fg/videos (by Joe Crawford)
+                                       					    				
+2.Articles 
+https://support.snatchbot.me/docs/customizing-chat-button-with-css
+
+
